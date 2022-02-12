@@ -7,7 +7,6 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.*;
 import org.testng.Assert;
-import Helper.Check;
 import java.time.Duration;
 import java.util.List;
 import java.util.Set;
@@ -62,7 +61,7 @@ public class WebCommands {
     }
 
     public void clickThis(By locator) {
-        getElementWithWait(locator).click();
+        getElement(locator).click();
         Misc.sleep(2);
     }
 

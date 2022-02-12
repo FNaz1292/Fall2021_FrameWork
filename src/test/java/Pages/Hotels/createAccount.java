@@ -13,6 +13,13 @@ public class createAccount extends WebCommands {
     By wrongInputFirstNameLocator=By.id("firstName-error");
     By lastNameInputLocator=By.id("sign-up-last-name");
     By wrongInputLastNameLocator=By.id("lastName-error");
+    By emailLoginBoxLocator= By.id("sign-up-email");
+    By emailBoxCheckMarkLocator=By.name("email");
+    By tickMarkLocator=By.xpath("//div[@class='form-element valid']\")");
+
+
+
+
 
 
     public void emailAddress(){
@@ -43,11 +50,23 @@ public class createAccount extends WebCommands {
         getText(wrongInputLastNameLocator);
         return true;
     }
+    public void enterEmail(){
+        type(emailLoginBoxLocator,"abs@fgh.com");
+    }
 
+    public boolean checkMarkDisplayed(){
+        getElement(tickMarkLocator);
+        checkTrue(checkMarkDisplayed(),"Check Mark not displayed.");
+        return true;
+    }
+    public void passwordInput(){
+        type(passwordBoxLocator,"acv123");
+    }
 
-
-
-
-
-
+    public void inputValidFirstName(){
+        type(firstNameInputLocator,"fairy");
+    }
+    public void inputValidLastName(){
+        type(lastNameInputLocator,"light");
+    }
 }

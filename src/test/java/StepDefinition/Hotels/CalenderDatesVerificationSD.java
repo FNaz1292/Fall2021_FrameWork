@@ -14,16 +14,15 @@ public class CalenderDatesVerificationSD {
     @Then("^I Go to current month if not displayed$")
      public void CurrentMonthIsDisplayed(){
         launchPage.CurrentMonthDisplayed();
-    }
-    @Then("^I Verify For current month that past dates(if any)are disabled$")
-    public  void pastDateDisabled(){
-        launchPage.dateDisabled();
+
     }
     @Then("^I Verify For current month back button on current month is disabled$")
     public void backButton(){
         launchPage.backButtonDisplayed();
 
     }
+    @Then("^I Verify For current month that past dates\\(if any\\)are disabled$")
+        public  void pastDateDisabled(){
+            launchPage.dateDisabled();
+    }}
 
-
-}
